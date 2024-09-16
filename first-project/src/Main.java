@@ -21,5 +21,26 @@ public class Main {
 
         int temperaturaEmFahrenheitInteira = (int) temperaturaEmFahrenheit;
         System.out.println("A temperatura em Fahrenheit inteira é: " + temperaturaEmFahrenheitInteira);
+
+
+        //casting de double para inteiro
+        double numeroDouble = 24.233;
+        int castInteiro = (int) numeroDouble;
+        System.out.println(castInteiro);
+
+        //Completando a palavra
+        char vogal = 'a';
+        String palavra = "cas";
+    
+        palavra = palavra + vogal;
+        System.out.println(palavra);
+
+        //Calcular desconto
+        double precoProduto = 50;
+        double percentualDesconto = 0.1;
+        double novoPreco = precoProduto * (1 - percentualDesconto);
+
+        System.out.printf("O preço antes era de %.2fR$, com um desconto de %.2f equivale a %.2f", precoProduto, percentualDesconto, novoPreco);
+
     }
 }
