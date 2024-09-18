@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -42,5 +44,31 @@ public class Main {
 
         System.out.printf("O preço antes era de %.2fR$, com um desconto de %.2f equivale a %.2f", precoProduto, percentualDesconto, novoPreco);
 
+        //Calcular área
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(""" 
+                Digite:
+                1. Calcular área do quadrado
+                2. Calcular área do círculo
+                """);
+        int escolha = scanner.nextInt();
+        if (escolha == 1){
+            System.out.println("Digite o lado do quadrado: ");
+            int lado = scanner.nextInt();
+            System.out.println(lado * lado);
+        } else {
+            System.out.println("Digite o raio do círculo: ");
+            int raio = scanner.nextInt();
+            System.out.println(Math.PI * Math.pow(raio, 2));
+        }
+
+        //Calcular fatorial
+        System.out.println("Escolha um número para calcular o seu fatorial:");
+        int numero = scanner.nextInt();
+        int fatorial = 1;
+        for (int i = 1; i <= numero ; i++) {
+            fatorial *= i;
+        }
+        System.out.println(fatorial);
     }
 }
