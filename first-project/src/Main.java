@@ -70,5 +70,15 @@ public class Main {
             fatorial *= i;
         }
         System.out.println(fatorial);
+
+
+        //Implementando a classe Nova Conta Bancaria
+        Nova_Conta_Bancaria conta = new Nova_Conta_Bancaria();
+
+        conta.setNumeroConta(12345);
+        conta.setSaldo(500);
+        conta.titular = "João";
+
+        System.out.println("Conta do titula " + conta.titular + " Com saldo " + conta.getSaldo());
     }
 }
