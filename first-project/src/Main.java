@@ -1,3 +1,5 @@
+import br.com.jpk.classes.ConversaoMoeda;
+
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -80,5 +82,8 @@ public class Main {
         conta.titular = "João";
 
         System.out.println("Conta do titula " + conta.titular + " Com saldo " + conta.getSaldo());
+
+        ConversaoMoeda conversaoMoeda = new ConversaoMoeda();
+        conversaoMoeda.converterDolarParaReal(100);
     }
 }

@@ -1,9 +1,9 @@
 package br.com.alura.screenmatch.modelos;
 
 public class Titulo {
-    private String nome;
-    private int anoDeLancamento;
-    private boolean incluidoNoPlano;
+    protected String nome;
+    protected int anoDeLancamento;
+    protected boolean incluidoNoPlano;
     private double somaAvaliacoes;
     private int totalAvaliacoes;
     private int duracaoMinutos;
@@ -45,7 +45,7 @@ public class Titulo {
     }
 
     public void exibeFichaTecnica(){
-        System.out.println("Nome do FIlme: " + nome);
+        System.out.println("Nome do Filme: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
         if (incluidoNoPlano){
             System.out.println("O filme está incluído no plano");

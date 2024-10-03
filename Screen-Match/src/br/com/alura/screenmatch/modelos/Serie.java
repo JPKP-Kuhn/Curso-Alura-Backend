@@ -42,4 +42,17 @@ public class Serie extends Titulo{
     public int getDuracaoMinutos() {
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
     }
+
+    @Override
+    public void exibeFichaTecnica(){
+        System.out.println("Nome da Serie: " + nome);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
+        if (incluidoNoPlano){
+            System.out.println("A serie está incluído no plano");
+        } else {
+            System.out.println("A serie não está incluído no plano");
+        }
+    }
+
 }
+

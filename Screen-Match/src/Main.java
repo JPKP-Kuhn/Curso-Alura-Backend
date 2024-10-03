@@ -1,4 +1,6 @@
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
+import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -22,7 +24,7 @@ public class Main {
         meuFilme.avalia(7.8);
         meuFilme.avalia(8.9);
         meuFilme.avalia(9.7);
-        System.out.println("Total de avaliações" + meuFilme.getTotalAvaliacoes());
+        System.out.println("Total de avaliações " + meuFilme.getTotalAvaliacoes());
 
         System.out.println(meuFilme.pegaMedia());
 
@@ -41,6 +43,15 @@ public class Main {
         calculadoraDeTempo.inclui(outroFilme);
         calculadoraDeTempo.inclui(serie);
         System.out.println(calculadoraDeTempo.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNome("Scott Pilgrim contra o mundo");
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
 
     }
 }
