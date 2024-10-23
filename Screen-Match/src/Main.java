@@ -8,15 +8,15 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O Poderoso Chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O poderoso chefão", 1970);
+        //meuFilme.setNome("O Poderoso Chefão");
+        //meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoMinutos(180);
         System.out.println("Duração do filme " + meuFilme.getNome() + " é de " + meuFilme.getDuracaoMinutos() +" min");
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        Filme outroFilme = new Filme("Avatar", 2023);
+        //outroFilme.setNome("Avatar");
+        //outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoMinutos(200);
 
         //Instanciar um objeto
@@ -30,9 +30,8 @@ public class Main {
 
         System.out.println(meuFilme.pegaMedia());
 
-        Serie serie = new Serie();
-        serie.setNome("Scott Pilgrim contra o mundo");
-        serie.setAnoDeLancamento(2023);
+        Serie serie = new Serie("Scott Pilgrim contra o mundo", 2023);
+        //serie.setAnoDeLancamento(2023);
         serie.exibeFichaTecnica();
         serie.setTemporadas(1);
         serie.setEpisodiosPorTemporada(8);
@@ -55,10 +54,8 @@ public class Main {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var novoFilme = new Filme();
+        var novoFilme = new Filme("Dogville", 2003);
         novoFilme.setDuracaoMinutos(200);
-        novoFilme.setNome("Dogville");
-        novoFilme.setAnoDeLancamento(2003);
         novoFilme.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
@@ -67,5 +64,9 @@ public class Main {
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
         System.out.println(listaDeFilmes);
+        listaDeFilmes.add(novoFilme);
+        System.out.println(listaDeFilmes.get(2));
+
+        
     }
 }

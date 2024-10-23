@@ -1,11 +1,10 @@
 package br.com.alura.screenmatch.calculos;
 
-import org.jetbrains.annotations.NotNull;
 
 public class FiltroRecomendacao {
     private String recomendacao;
 
-    public void filtra(@NotNull Classificavel classificavel){
+    public void filtra(Classificavel classificavel){
         if (classificavel.getClassificacao() >= 4){
             System.out.println("Preferidos do momento");
         } else if (classificavel.getClassificacao() >= 2){

@@ -1,7 +1,6 @@
 package br.com.alura.screenmatch.calculos;
 
 import br.com.alura.screenmatch.modelos.Titulo;
-import org.jetbrains.annotations.NotNull;
 
 public class CalculadoraDeTempo {
     private int tempoTotal;
@@ -18,7 +17,7 @@ public class CalculadoraDeTempo {
 //        tempoTotal += s.getDuracaoMinutos();
 //    }
 
-    public void inclui(@NotNull Titulo titulo){
+    public void inclui(Titulo titulo){
         this.tempoTotal += titulo.getDuracaoMinutos();
     }
 }
