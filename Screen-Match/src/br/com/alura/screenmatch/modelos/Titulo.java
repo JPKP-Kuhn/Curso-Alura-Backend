@@ -1,7 +1,11 @@
 package br.com.alura.screenmatch.modelos;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo implements Comparable<Titulo> {
+    @SerializedName("Title")
     protected String nome;
+    @SerializedName("Year")
     protected int anoDeLancamento;
     protected boolean incluidoNoPlano;
     private double somaAvaliacoes;
@@ -11,6 +15,12 @@ public class Titulo implements Comparable<Titulo> {
     public Titulo(String nome, int anoDeLancamento) {
         this.nome = nome;
         this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public Titulo(TituloOmdb meuTituloOmdb) {
+        this.nome = meuTituloOmdb.title();
+        this.anoDeLancamento = Integer.parseInt(meuTituloOmdb.year());
+        this.duracaoMinutos = Integer.parseInt(meuTituloOmdb.runtime().substring(0, 2));
     }
 
     public String getNome() {
@@ -49,27 +59,36 @@ public class Titulo implements Comparable<Titulo> {
         this.anoDeLancamento = anoDeLancamento;
     }
 
-    public void exibeFichaTecnica(){
+    public void exibeFichaTecnica() {
         System.out.println("Nome do Filme: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
-        if (incluidoNoPlano){
+        if (incluidoNoPlano) {
             System.out.println("O filme está incluído no plano");
         } else {
             System.out.println("O filme não está incluído no plano");
         }
     }
 
-    public void avalia(double nota){
+    public void avalia(double nota) {
         somaAvaliacoes += nota;
         totalAvaliacoes++;
     }
 
-    public double pegaMedia(){
-        return (somaAvaliacoes/totalAvaliacoes);
+    public double pegaMedia() {
+        return (somaAvaliacoes / totalAvaliacoes);
     }
 
     @Override
     public int compareTo(Titulo outroTitulo) {
         return this.getNome().compareTo(outroTitulo.getNome());
+    }
+
+    @Override
+    public String toString() {
+        return "Titulo{" +
+                "nome='" + nome + '\'' +
+                ", anoDeLancamento=" + anoDeLancamento +
+                ", duracaoMinutos=" + duracaoMinutos +
+                '}';
     }
 }
