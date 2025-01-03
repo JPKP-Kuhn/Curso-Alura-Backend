@@ -1,0 +1,18 @@
+[
+  {
+    "Nome": "Matrix",
+    "AnoDeLancamento": 1993,
+    "IncluidoNoPlano": false,
+    "SomaAvaliacoes": 0.0,
+    "TotalAvaliacoes": 0,
+    "DuracaoMinutos": 60
+  },
+  {
+    "Nome": "Avatar",
+    "AnoDeLancamento": 2009,
+    "IncluidoNoPlano": false,
+    "SomaAvaliacoes": 0.0,
+    "TotalAvaliacoes": 0,
+    "DuracaoMinutos": 16
+  }
+]
